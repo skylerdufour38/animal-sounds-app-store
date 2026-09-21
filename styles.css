@@ -1,0 +1,223 @@
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --panel-border: #e2e8f0;
+  --primary: #2f6bff;
+  --primary-dark: #214fc4;
+  --text: #172033;
+  --muted: #64748b;
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 18%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 24px 32px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7fb2ff, var(--primary));
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.primary-button {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1.4rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 20px rgba(47, 107, 255, 0.3);
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 460px);
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.editor-panel {
+  padding: 24px;
+}
+
+.editor-panel h1 {
+  margin: 0 0 24px;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+}
+
+.app-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field-row {
+  display: grid;
+  gap: 8px;
+}
+
+.field-row label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.field-row input {
+  width: 100%;
+  border: 1px solid #dfe6f2;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  background: #f9fbff;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-row input:focus {
+  outline: none;
+  border-color: rgba(47, 107, 255, 0.7);
+  box-shadow: 0 0 0 4px rgba(47, 107, 255, 0.12);
+  background: white;
+}
+
+.preview-panel {
+  padding: 24px 22px;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf2f7;
+  margin-bottom: 16px;
+}
+
+.preview-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffd166, #f59e0b);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  box-shadow: 0 12px 18px rgba(245, 158, 11, 0.25);
+}
+
+.preview-heading h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.preview-heading span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.app-meta-list {
+  margin: 0;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.meta-row:last-child {
+  border-bottom: none;
+}
+
+.meta-row dt {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.meta-row dd {
+  margin: 0;
+  color: var(--text);
+  word-break: break-word;
+  text-align: right;
+}
+
+@media (max-width: 860px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .meta-row dd {
+    text-align: left;
+  }
+}

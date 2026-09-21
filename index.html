@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Sounds App Preview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">Animal Sounds</span>
+        </div>
+        <button class="primary-button" type="button">Create App</button>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel editor-panel">
+          <h1>App Information</h1>
+          <form id="app-form" class="app-form">
+            <div class="field-row">
+              <label for="appName">App Name</label>
+              <input id="appName" name="appName" type="text" value="Animal Sounds" />
+            </div>
+
+            <div class="field-row">
+              <label for="bundleId">Bundle ID</label>
+              <input id="bundleId" name="bundleId" type="text" value="com.smartbabyapps.animalsounds" />
+            </div>
+
+            <div class="field-row">
+              <label for="version">Version</label>
+              <input id="version" name="version" type="text" value="2.0" />
+            </div>
+
+            <div class="field-row">
+              <label for="platform">Platform</label>
+              <input id="platform" name="platform" type="text" value="iOS" />
+            </div>
+
+            <div class="field-row">
+              <label for="minimumOs">Minimum OS</label>
+              <input id="minimumOs" name="minimumOs" type="text" value="3.1" />
+            </div>
+
+            <div class="field-row">
+              <label for="ipaFile">IPA File</label>
+              <input id="ipaFile" name="ipaFile" type="text" value="Animal Sounds 2.0.ipa" />
+            </div>
+
+            <div class="field-row">
+              <label for="fileSize">File Size</label>
+              <input id="fileSize" name="fileSize" type="text" value="19.8 MB" />
+            </div>
+
+            <div class="field-row">
+              <label for="bundlePath">App Bundle Path</label>
+              <input id="bundlePath" name="bundlePath" type="text" value="Payload/Animal Sounds.app" />
+            </div>
+
+            <div class="field-row">
+              <label for="archiveType">Archive Type</label>
+              <input id="archiveType" name="archiveType" type="text" value="App Store Package" />
+            </div>
+          </form>
+        </section>
+
+        <aside class="panel preview-panel" aria-live="polite">
+          <div class="preview-header">
+            <div class="preview-icon">A</div>
+            <div class="preview-heading">
+              <h2 id="previewAppName">Animal Sounds</h2>
+              <span id="previewArchiveType">App Store Package</span>
+            </div>
+          </div>
+
+          <dl class="app-meta-list">
+            <div class="meta-row">
+              <dt>App Name</dt>
+              <dd id="previewAppNameValue">Animal Sounds</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Bundle ID</dt>
+              <dd id="previewBundleId">com.smartbabyapps.animalsounds</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Version</dt>
+              <dd id="previewVersion">2.0</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Platform</dt>
+              <dd id="previewPlatform">iOS</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Minimum OS</dt>
+              <dd id="previewMinimumOs">3.1</dd>
+            </div>
+            <div class="meta-row">
+              <dt>IPA File</dt>
+              <dd id="previewIpaFile">Animal Sounds 2.0.ipa</dd>
+            </div>
+            <div class="meta-row">
+              <dt>File Size</dt>
+              <dd id="previewFileSize">19.8 MB</dd>
+            </div>
+            <div class="meta-row">
+              <dt>App Bundle Path</dt>
+              <dd id="previewBundlePath">Payload/Animal Sounds.app</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Archive Type</dt>
+              <dd id="previewArchiveTypeValue">App Store Package</dd>
+            </div>
+          </dl>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
